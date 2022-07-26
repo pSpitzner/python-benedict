@@ -100,7 +100,7 @@ def completer(self, event):
         term = "']"
 
     try:
-        if len(path) > 0:
+        if len(path) > 0 and path in obj.keys():
             items = (sep.join([path, name]) for name in obj[path].keys())
         else:
             items = obj.keys()
